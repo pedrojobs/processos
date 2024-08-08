@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVIÇOS INTERNOS</title>
+    <!-- Incluir a biblioteca jstree CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <!-- Incluir a biblioteca jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Incluir a biblioteca jstree JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+        <!-- Incluir o CSS personalizado -->
+        
+       <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h2>Menu Serviços</h2>
+        <ul><li><a href="Menu Completo.html">Todos os Produtos</a></li>
+          <li><a href="Portal de Diplomas.html">Portal de Diplomas</a></li>
+          <li><a href="Diploma Manual.html">Diploma Manual</a></li>
+          <li><a href="Diploma Totvs.html">Diploma Totvs</a></li>
+          <li><a href="Diploma API.html">Diploma API</a></li>
+          <li><a href="Portal de Validação.html">Portal de Validação</a></li>
+          <li><a href="Portal Assinaturas.html">Portal Assinaturas</a></li>
+          <li><a href="GED.html">GED</a></li>
+          <li><a href="RD.html">RD</a></li>
+          <li><a href="Menu interno.html">Serviços internos</a></li>
+        </ul>
+    
+    </div>
+    
+  </body>
+<body>
+    <h1>Serviços Internos Safeduc - EMX</h1>
+    <!-- Div onde o menu de árvore será renderizado -->
+    <div id="jstree"></div>
+
+    <script>
+        $(document).ready(function(){
+            // Dados JSON para a estrutura de árvore
+            var data = [
+                
+                {"icon":"fas fa-folder","text": "Suporte Interno",
+                 "children": [
+                        {"icon":"fas fa-folder","text": "Homologação",
+                        "children": [
+                    {"icon":"fas fa-folder","text": "Diploma Manual",
+                            "children": [
+                                         {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação Acadêmica",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        
+                                                          ]           
+                                                            
+                                                        },
+                                                       {"icon":"fas fa-folder","text": "Portal de Validação",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Gerar Documentos"},
+                                                          ]        
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        {"icon":"fas fa-file","text": "Valida JSON "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "SQL Design "},
+                                                        {"icon":"fas fa-file","text": "Criar Design do Diploma"},
+                                                        {"icon":"fas fa-file","text": "Portal de Validação"},
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e Criticas "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploms Totvs",
+                            "children": [
+                            {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                              {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação Acadêmica",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Portal de Validação",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Gerar Documentos"},
+                                                          ]        
+                                                        },
+                                                        {"icon":"fas fa-file","text": "FVV "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        {"icon":"fas fa-file","text": "Valida JSON "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "SQL Design "},
+                                                        {"icon":"fas fa-file","text": "Criar Design do Diploma"},
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e criticas "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploma API",
+                            "children": [
+                                         {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação Acadêmica",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                         {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Portal de Validação",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                         {"icon":"fas fa-file","text": "Gerar Documentos "},
+                                                          ]        
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },                                             
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        {"icon":"fas fa-file","text": "Valida JSON "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "SQL Design "},
+                                                        {"icon":"fas fa-file","text": "Criar Design do Diploma"},
+                                                        
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios, Sugestões e criticas "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Portal de Assinatura",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Certificados ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Alteração Certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Exclusão de Certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Certificado Digital vencido"},
+                                                          ]                                                     
+                                              },
+                                  
+                                                        {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                        {"icon":"fas fa-file","text": "Gerar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e criticas "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    { "icon":"fas fa-folder","text": "GED",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Documentos",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Notificações "},
+                                                         {"icon":"fas fa-folder","text": "Gestão ",
+                                                "children": [
+                                                         {"icon":"fas fa-file","text": "Assinar "},
+                                                         {"icon":"fas fa-file","text": "Assinatura Externa "},
+                                                         {"icon":"fas fa-file","text": "Baixar "},
+                                                         {"icon":"fas fa-file","text": "Visualizar "},
+                                                         {"icon":"fas fa-file","text": "Desativar "},
+                                                         {"icon":"fas fa-file","text": "Busca e Pesquisa Documentos "}
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Assinar Documentos "},
+                                                         {"icon":"fas fa-folder","text": "Incluir Documentos ",
+                                                            "children": [
+                                                         {"icon":"fas fa-folder","text": "Identificação ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Seleciona Documentos "},
+                                                         {"icon":"fas fa-file","text": "Lista Doc Totvs "},
+                                                         {"icon":"fas fa-file","text": "Incluir Imagens "},
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Fluxo ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Adicionar Fluxo "},
+                                                         {"icon":"fas fa-file","text": "Deletar Fluxo "}
+                                                         ]
+                                                         }
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Assinar Lote "},
+                                                         ]                                                      
+                                                        },    
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Classificações ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Classificação "},
+                                                         {"icon":"fas fa-file","text": "Alterar Classificação "},
+                                                         {"icon":"fas fa-file","text": "Excluir Classificação "}
+                                                         ]  
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Tipos de documentos ",
+                                                           "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Documento "},
+                                                         {"icon":"fas fa-file","text": "Alterar Documento "},
+                                                         {"icon":"fas fa-file","text": "Excluir Documento "}
+                                                         ]  
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Fluxos de processos ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Fluxo de Processos "},
+                                                         {"icon":"fas fa-file","text": "Alterar Fluxo de Processos "},
+                                                         {"icon":"fas fa-file","text": "Excluir Fluxo de Processos "}
+                                                         ]   
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Certificados Digitais ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Genrenciar "},
+                                                         
+                                                         ]  
+                                                         },
+                                                          ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Sistema",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Documentos Inativos "},
+                                                        {"icon":"fas fa-folder","text": "Usuários",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Cadastro Instituição "},
+                                                        {"icon":"fas fa-file","text": "Perfis de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Grupos de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Unidades "},
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder","text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade "},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance "}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial "}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e criticas "}
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                         },
+                         {"icon":"fas fa-folder","text": "RD",
+                            "children": [ 
+                                              {"icon":"fas fa-folder","text": "Documentos",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Processos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote "},
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Status do Processo",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Aguardando Aprovação da Emissora"},
+                                                         {"icon":"fas fa-file","text": "Rejeitado pela Emissora"},
+                                                         {"icon":"fas fa-file","text": "Análise Reprovada"},
+                                                         {"icon":"fas fa-file","text": "Registrado"},
+                                                         {"icon":"fas fa-file","text": "Anulado"},
+                                                         {"icon":"fas fa-file","text": "Registro Recusado"},
+                                                         ]
+                                                         },                                                   
+                                                        
+                                                         {"icon":"fas fa-folder","text": "Lotes de Processos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Lote "},
+                                                         {"icon":"fas fa-file","text": "Editar Lote "},
+                                                        ]
+                                                         },
+                                                         
+                                                         
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Cursos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Curso "},
+                                                         {"icon":"fas fa-file","text": "Editar Curso "},
+                                                        ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Design ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Design "},
+                                                         {"icon":"fas fa-file","text": "Editar Design "},
+                                                        ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Registro do Livro ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Registrar "},
+                                                         {"icon":"fas fa-file","text": "Recusar "},
+                                                        ]
+
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Livros ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Livro "},
+                                                         {"icon":"fas fa-file","text": "Editar livro "},
+                                                         {"icon":"fas fa-file","text": "Excluir livro "},
+                                                        ]
+                                                         }
+                                                         ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Ajustes ",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Usuários",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Assinantes ",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Assinantes "},
+                                                         {"icon":"fas fa-file","text": "Editar Assinantes "}
+                                                         ]  
+                                                        }
+                                                        ]
+                                                      },                                                        
+                                                        {"icon":"fas fa-folder","text": "Config. ADM",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Cadastro Cliente ",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastra Cliente "},
+                                                         {"icon":"fas fa-file","text": "Editar Cliente "},
+                                                         {"icon":"fas fa-file","text": "Desativa Cliente "}
+                                                         ] 
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e criticas "}
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                    },
+                        ]
+                       },               
+                    ]
+
+                },           
+                {"icon":"fas fa-folder","text": "Implantação",
+                    "children": [
+                    {"icon":"fas fa-folder","text": "Diploma Manual",
+                            "children": [
+                                                        {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploms Totvs",
+                            "children": [
+                                                     {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                       
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploma API",
+                            "children": [
+                                                     {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Portal de Assinatura",
+                            "children": [
+                                                     {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                        
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "GED",
+                            "children": [
+                                                        {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                        
+                                                ]
+                         },
+                    {"icon":"fas fa-folder","text": "RD",
+                            "children": [
+                            {"icon":"fas fa-file","text": "Planejamento da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Preparação dos Ambientes "},
+                                                        {"icon":"fas fa-file","text": "Execução da Implantação "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Testes e Validação"},
+                                                        {"icon":"fas fa-file","text": "Treinamento e Suporte Inicial"},
+                                                        {"icon":"fas fa-file","text": "Documentação da Implantação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Monitoramento Pós-Implantação "},
+                                                        
+                                                ]
+                    },
+                    ]
+                },           
+                {"icon":"fas fa-folder","text": "Desenvolvimento",
+                    "children": [
+                    {"icon":"fas fa-folder","text": "Diploma Manual",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                              {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                         {"icon":"fas fa-file","text": "Configuração "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Portal de Validação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema "}
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploms Totvs",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                              {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                        {"icon":"fas fa-file","text": "Gerar Documentos ()"},
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "FVV "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Criar Design do Diploma"},
+                                                        {"icon":"fas fa-file","text": "Portal de Validação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Diploma API",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                              {"icon":"fas fa-folder","text": "Diploma ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-folder","text": "Historico ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Documentação ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Enviar Lote"},
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote"},
+                                                         {"icon":"fas fa-file","text": "Pesquisar do Lote"},
+                                                         {"icon":"fas fa-file","text": "Anular Lote"},
+                                                          ]           
+                                                            
+                                                        },
+                                  
+                                                        {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                        {"icon":"fas fa-file","text": "Gerar Documentos ()"},
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Criar Design do Diploma"},
+                                                        {"icon":"fas fa-file","text": "Portal de Validação"},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema "}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "Portal de Assinatura",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Usuários ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar novo usuário"},
+                                                         {"icon":"fas fa-file","text": "Alteração cadastral"},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário"},
+                                                                                                                 
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Certificados ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Alteração Certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Exclusão de Certificado Digital"},
+                                                         {"icon":"fas fa-file","text": "Certificado Digital vencido"},
+                                                          ]                                                     
+                                              },
+                                  
+                                                        {"icon":"fas fa-file","text": "Envio de Documentos "},
+                                                        {"icon":"fas fa-file","text": "Gerar Documentos ()"},
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Relatórios "},
+                                                        {"icon":"fas fa-file","text": "Valida JSON "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "SQL Design "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema"}
+                                                        
+                                            
+                                                    
+                                                ]
+                    },
+                    {"icon":"fas fa-folder","text": "GED",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Documentos ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Notificações"},
+                                                         {"icon":"fas fa-file","text": "Gestão"},
+                                                         {"icon":"fas fa-file","text": "Assinar Documentos"},
+                                                         {"icon":"fas fa-file","text": "Incluir Documentos"},
+                                                         {"icon":"fas fa-file","text": "indicadores"},
+                                                         {"icon":"fas fa-file","text": "Assinar Lote"},
+                                                         
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Classificações"},
+                                                         {"icon":"fas fa-file","text": "Tipos de documentos"},
+                                                         {"icon":"fas fa-file","text": "Fluxos de processos"},
+                                                         {"icon":"fas fa-file","text": "Certificados Digitais"},
+                                                          ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Sistema",
+                                              "children": [
+                                                        {"icon":"fas fa-file","text": "Documentos Inativos "},
+                                                        {"icon":"fas fa-folder","text": "Usuários(Solitação)",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Cadastro Instituição "},
+                                                        {"icon":"fas fa-file","text": "Perfis de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Grupos de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Unidades "},
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema "}
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                         },
+                    {"icon":"fas fa-folder","text": "RD",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Documentos ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Notificações"},
+                                                         {"icon":"fas fa-file","text": "Gestão"},
+                                                         {"icon":"fas fa-file","text": "Assinar Documentos"},
+                                                         {"icon":"fas fa-file","text": "Incluir Documentos"},
+                                                         {"icon":"fas fa-file","text": "indicadores"},
+                                                         {"icon":"fas fa-file","text": "Assinar Lote"},
+                                                         
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Classificações"},
+                                                         {"icon":"fas fa-file","text": "Tipos de documentos"},
+                                                         {"icon":"fas fa-file","text": "Fluxos de processos"},
+                                                         {"icon":"fas fa-file","text": "Certificados Digitais"},
+                                                          ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Sistema",
+                                              "children": [
+                                                        {"icon":"fas fa-file","text": "Documentos Inativos "},
+                                                        {"icon":"fas fa-folder","text": "Usuários(Solitação)",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Cadastro Instituição "},
+                                                        {"icon":"fas fa-file","text": "Perfis de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Grupos de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                                                                                
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Paralisar serviço por falta de pagamento"},
+                                                        {"icon":"fas fa-file","text": "Liberar acesso ao sistema"}
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                    },
+                    ]
+                }
+            ];
+            // Inicializar o jstree com os dados
+            $('#jstree').jstree({
+                'core': {
+                    'data': data
+                }
+            });
+        });
+    </script>
+</body>
+</html>

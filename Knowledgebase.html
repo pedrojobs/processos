@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Conhecimento</title>
+  <link href="path/to/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col min-h-screen">
+    <header class="bg-primary text-primary-foreground py-4 px-6 shadow-sm">
+      <div class="container mx-auto flex items-center justificar-between">
+        <a class="text-xl font-bold" href="#">
+          Base de Conhecimento
+        </a>
+        <nav class="flex items-center gap-4">
+          <a class="hover:text-accent" href="#">
+            Início
+          </a>
+          <a class="hover:text-accent" href="#">
+            Artigos
+          </a>
+          <a class="hover:text-accent" href="#">
+            Sobre
+          </a>
+          <a class="hover:text-accent" href="#">
+            Contato
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="flex-1 grid grid-cols-12 gap-6 p-6">
+      <div class="col-span-3 bg-muted rounded-lg p-4">
+        <h2 class="text-lg font-semibold mb-4">Categorias</h2>
+        <nav class="space-y-2">
+          <a class="block hover:text-accent" href="#">
+            Primeiros Passos
+          </a>
+          <a class="block hover:text-accent" href="#">
+            Solução de Problemas
+          </a>
+          <a class="block hover:text-accent" href="#">
+            Integrações
+          </a>
+          <a class="block hover:text-accent" href="#">
+            Faturamento
+          </a>
+          <a class="block hover:text-accent" href="#">
+            Segurança
+          </a>
+        </nav>
+      </div>
+      <div class="col-span-9 space-y-6">
+        <div class="bg-muted rounded-lg p-4">
+          <h2 class="text-lg font-semibold mb-4">Últimos Artigos</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Como configurar sua conta</h3>
+                <p class="text-muted-foreground text-sm">
+                  Aprenda como criar sua conta e começar a usar nossa plataforma.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Resolvendo problemas comuns</h3>
+                <p class="text-muted-foreground text-sm">
+                  Encontre soluções para os problemas mais comuns que você pode encontrar.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Integrando com aplicativos de terceiros</h3>
+                <p class="text-muted-foreground text-sm">
+                  Aprenda como conectar nossa plataforma com seus aplicativos e ferramentas favoritos.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Entendendo seu faturamento</h3>
+                <p class="text-muted-foreground text-sm">
+                  Obtenha insights sobre sua assinatura e detalhes de faturamento.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Mantendo seus dados seguros</h3>
+                <p class="text-muted-foreground text-sm">
+                  Aprenda sobre nossas medidas de segurança e como proteger suas informações.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Migrando de outra plataforma</h3>
+                <p class="text-muted-foreground text-sm">
+                  Obtenha orientações sobre como fazer a transição de seus dados e fluxos de trabalho para nossa plataforma.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-muted rounded-lg p-4">
+          <h2 class="text-lg font-semibold mb-4">Artigos em Destaque</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Dominando o painel</h3>
+                <p class="text-muted-foreground text-sm">
+                  Descubra todos os recursos e ferramentas poderosas disponíveis em nosso painel.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Automatizando seus fluxos de trabalho</h3>
+                <p class="text-muted-foreground text-sm">
+                  Aprenda como configurar processos automatizados para agilizar suas operações.
+                </p>
+              </div>
+            </a>
+            <a class="block bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold mb-2">Otimizando seu desempenho</h3>
+                <p class="text-muted-foreground text-sm">
+                  Obtenha dicas e estratégias para melhorar a eficiência de sua equipe e processos.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-muted text-muted-foreground py-4 px-6 text-sm">
+      <div class="container mx-auto flex items-center justify-between"></div>
+    </footer>
+  </div>
+</body>
+</html>

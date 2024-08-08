@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Serviço</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1500px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .icon-container1 {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .icon {
+            text-align: center;
+            margin: 15px;
+        }
+        .icon img {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        .icon p {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #333;
+        }
+        .icon a {
+            text-decoration: none;
+            color: #333;
+        }
+        .icon a:hover {
+            text-decoration: underline;
+        }
+        #menus ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        #menus ul li {
+            margin: 0 15px;
+        }
+        #menus ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #menus ul li a:hover {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+
+<script>
+    function showPopup(id) {
+        document.querySelector('.overlay').style.display = 'block';
+        document.getElementById('popup-' + id).style.display = 'block';
+    }
+
+    function closePopup() {
+        document.querySelector('.overlay').style.display = 'none';
+        document.querySelectorAll('.popup').forEach(function(popup) {
+            popup.style.display = 'none';
+        });
+    }
+</script>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                    const scripts = document.getElementById('content').getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].text);
+                    }
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container1">
+        <h1>Catálogo de Serviço</h1>
+        <div id="menus">
+            <ul>
+                <li><a href="Portal de Diplomas.html" onclick="showPopup('Content')">Portal de Diplomas</a></li>
+                <li><a href="Diploma Manual.html" onclick="loadContent('Content')">Diploma Manual</a></li>
+                <li><a href="Diploma Totvs.html" onclick="loadContent('Content')">Diploma Totvs</a></li>
+                <li><a href="Diploma API.html" onclick="loadContent('Content')">Diploma API</a></li>
+                <li><a href="Portal Assinaturas.html" onclick="loadContent('Content')">Portal de Assinaturas</a></li>
+                <li><a href="GED.html" onclick="loadContent('Content')"> GED</a></li>
+                <li><a href="RD.html" onclick="loadContent('Content')"> RD</a></li>
+            </ul>
+        </div>
+        <div id="Content" class="Content">
+       
+    </div>
+</body>
+
+</html>

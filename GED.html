@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GED</title>
+    <!-- Incluir a biblioteca jstree CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <!-- Incluir a biblioteca jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Incluir a biblioteca jstree JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+        <!-- Incluir o CSS personalizado -->
+        
+       <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body>
+    <div id="menu">
+        <h2>Menu Serviços</h2>
+        <ul><li><a href="Menu Completo.html">Todos os Produtos</a></li>
+            
+                <li><a href="Portal de Diplomas.html">Portal de Diplomas</a></li>
+                <li><a href="Diploma Manual.html">Diploma Manual</a></li>
+                <li><a href="Diploma Totvs.html">Diploma Totvs</a></li>
+                <li><a href="Diploma API.html">Diploma API</a></li>
+                <li><a href="Portal de Validação.html">Portal de Validação</a></li>
+                <li><a href="Portal Assinaturas.html">Portal Assinaturas</a></li>
+                <li><a href="GED.html">GED</a></li>
+                <li><a href="RD.html">RD</a></li>
+                <li><a href="Menu interno.html">Serviços internos</a></li>
+        </ul>
+        </div>
+    
+  </body>
+<body>
+    <h1>Visão do Clientes GED</h1>
+    <!-- Div onde o menu de árvore será renderizado -->
+    <div id="jstree">
+    </div>
+     
+    <script>
+        $(document).ready(function(){
+            // Dados JSON para a estrutura de árvore
+            var data = [
+                { "icon":"fas fa-folder","state": {"opened": true},"text": "Suporte",
+                    "children": [
+                   { "icon":"fas fa-folder","state": {"opened": true},"text": "GED",
+                            "children": [
+                                              {"icon":"fas fa-folder","text": "Documentos",
+                                              "children": [
+                                                         {"icon":"fas fa-file","text": "Notificações "},
+                                                         {"icon":"fas fa-file","text": "Indicadores"},
+                                                         {"icon":"fas fa-folder","text": "Gestão ",
+                                                "children": [
+                                                         {"icon":"fas fa-file","text": "Assinar "},
+                                                         {"icon":"fas fa-file","text": "Assinatura Externa "},
+                                                         {"icon":"fas fa-file","text": "Baixar "},
+                                                         {"icon":"fas fa-file","text": "Visualizar "},
+                                                         {"icon":"fas fa-file","text": "Desativar "},
+                                                         {"icon":"fas fa-file","text": "Busca e Pesquisa Documentos "}
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Assinar Documentos "},
+                                                         {"icon":"fas fa-folder","text": "Incluir Documentos ",
+                                                            "children": [
+                                                         {"icon":"fas fa-folder","text": "Identificação ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Seleciona Documentos "},
+                                                         {"icon":"fas fa-file","text": "Lista Doc Totvs "},
+                                                         {"icon":"fas fa-file","text": "Incluir Imagens "},
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Fluxo ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Adicionar Fluxo "},
+                                                         {"icon":"fas fa-file","text": "Deletar Fluxo "}
+                                                         ]
+                                                         }
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-file","text": "Assinar Lote "},
+                                                         ]                                                      
+                                                        },    
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Classificações ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Classificação "},
+                                                         {"icon":"fas fa-file","text": "Alterar Classificação "},
+                                                         {"icon":"fas fa-file","text": "Excluir Classificação "}
+                                                         ]  
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Tipos de documentos ",
+                                                           "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Documento "},
+                                                         {"icon":"fas fa-file","text": "Alterar Documento "},
+                                                         {"icon":"fas fa-file","text": "Excluir Documento "}
+                                                         ]  
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Fluxos de processos ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Incluir Fluxo de Processos "},
+                                                         {"icon":"fas fa-file","text": "Alterar Fluxo de Processos "},
+                                                         {"icon":"fas fa-file","text": "Excluir Fluxo de Processos "}
+                                                         ]   
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Certificados Digitais ",
+                                                            "children": [
+                                                         {"icon":"fas fa-file","text": "Genrenciar "},
+                                                         
+                                                         ]  
+                                                         },
+                                                          ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Sistema",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Documentos Inativos "},
+                                                        {"icon":"fas fa-folder","text": "Usuários(Solitação)",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Importar Documentos "},
+                                                        {"icon":"fas fa-file","text": "Cadastro Instituição "},
+                                                        {"icon":"fas fa-file","text": "Perfis de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Grupos de Acesso "},
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-file","text": "Unidades "},
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Melhoria",
+                                                            "children":[
+                                                            {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                            {"icon":"fas fa-file","text": "Elogios, Sugestões e criticas "}
+                                                            ]
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        }
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                         },
+                     ]
+                },
+    
+                ];
+             
+            // Inicializar o jstree com os dados
+            $('#jstree').jstree({
+                'core': {
+                    'data': data
+                }
+                
+            });
+        });
+    </script>
+  
+</body> 
+
+</html>
+

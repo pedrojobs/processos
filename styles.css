@@ -1,0 +1,148 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+/* Menu no canto esquerdo */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #e9f0ef97;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #0b0000;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin: 15px 0;
+}
+
+/* Estilização dos links */
+#menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu ul li a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Botões estilizados */
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    background-color: #004085;
+    transform: translateY(0);
+}
+
+/* Estilo para a div do jstree */
+#jstree {
+    margin: 10px auto;
+    width: 40%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #0b0000;
+}
+
+/* Estilo para os nós da árvore */
+#jstree .jstree-node {
+    font-size: 16spx;
+    color: #000000;
+    padding: 5px 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* Ícones personalizados para os nós */
+#jstree .jstree-node .fas {
+    margin-right: 5px;
+}
+/* Estilo para os nós selecionados */
+#jstree .jstree-clicked {
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Ajustar o espaçamento e o ícone dos nós */
+#jstree .jstree-icon {
+    margin-right: 7px;
+}
+
+/* Ajustar a aparência dos nós ao passar o mouse */
+#jstree .jstree-hovered {
+    background: #e9ecef;
+    color: #007bff;
+    border-radius: 4px;
+}
+
+/* Ajustar a aparência dos ícones de expansão/colapso */
+#jstree .jstree-open > .jstree-ocl {
+    background: url('https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/32px.png') no-repeat -50px 0;
+}
+
+#jstree .jstree-closed > .jstree-ocl {
+    background: url('https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/32px.png') no-repeat -30px 0;
+}
+
+/* Estilo para os links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* Melhorar a aparência dos links ao passar o mouse */
+a:hover {
+    color: #007bff;
+}

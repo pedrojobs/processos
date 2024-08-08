@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Apoio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .pdf-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .pdf-item {
+            margin-bottom: 10px;
+        }
+        .pdf-link {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 300px;
+        }
+        .form-button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+        #menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu ul li a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <h1>Material de Apoio</h1>
+    <ul class="pdf-list" id="pdfList">
+        <!-- Os links dos PDFs serão adicionados aqui -->
+    </ul>
+    <div class="form-container">
+        <h2>Adicionar Novo PDF</h2>
+        <form id="pdfForm">
+            <label class="form-label" for="pdfName">Nome do PDF:</label>
+            <input class="form-input" type="text" id="pdfName" required>
+            <label class="form-label" for="pdfLink">Link do PDF:</label>
+            <input class="form-input" type="url" id="pdfLink" required>
+            <button class="form-button" type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('pdfForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pdfName = document.getElementById('pdfName').value;
+            const pdfLink = document.getElementById('pdfLink').value;
+
+            if (pdfName && pdfLink) {
+                const pdfList = document.getElementById('pdfList');
+                const listItem = document.createElement('li');
+                listItem.className = 'pdf-item';
+                const link = document.createElement('a');
+                link.className = 'pdf-link';
+                link.href = pdfLink;
+                link.textContent = pdfName;
+                link.target = '_blank';
+
+                listItem.appendChild(link);
+                pdfList.appendChild(listItem);
+
+                document.getElementById('pdfForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

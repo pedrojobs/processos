@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+        }
+        .card:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .card i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 18px;
+        }
+        #content {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        
+        <h1  style="text-align: center; padding: 20px; background-color: #262627; color: white;">Gestão de Processos / Safeduc</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card" onclick="loadContent('gestao_conhecimento.html')">
+                <i class="fas fa-book"></i>
+                <h3>Gestão do Conhecimento</h3>
+            </div>
+            
+            <div class="card" onclick="loadContent('servico operacao.html')">
+                <i class="fas fa-cogs"></i>
+                <h3>Gerenciamento de Operação de Serviço</h3>
+            </div>
+            <div class="card" onclick="loadContent('gerenciamento_mudanca.html')">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Gerenciamento de Mudança</h3>
+            </div>
+            <div class="card" onclick="loadContent('gerenciamento_risco.html')">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Gerenciamento de Risco</h3>
+            </div>
+            <div class="card" onclick="loadContent('gerenciamento_conformidade.html')">
+                <i class="fas fa-check-circle"></i>
+                <h3>Gerenciamento de Conformidade</h3>
+            </div>
+             <!-- Adicione mais cartões conforme necessário -->
+        </div>
+        
+        <div id="content">
+    
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Sobre ITIL</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f4f4f4;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .container {
+                        padding: 20px;
+                        margin: 0 auto;
+                        max-width: 1500px;
+                        background-color: white;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    }
+                    h1 {
+                        text-align: center;
+                        color: #333;
+                    }
+                    h2 {
+                        color: #007bff;
+                    }
+                    p {
+                        color: #555;
+                        line-height: 1.6;
+                    }
+                    ul {
+                        margin: 20px 0;
+                        padding: 0;
+                        list-style: none;
+                    }
+                    ul li {
+                        background: #f4f4f4;
+                        margin: 5px 0;
+                        padding: 10px;
+                        border-left: 5px solid #007bff;
+                    }
+                </style>
+            </head>
+            <body>
+           
+                <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre ITIL</title>
+
+</head>
+
+</html>

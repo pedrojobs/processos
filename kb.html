@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knowledge Base</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    main {
+      padding: 20px;
+    }
+    .file-upload {
+      margin-bottom: 20px;
+    }
+    .tree-view {
+      margin-top: 20px;
+    }
+    .tree-view ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .tree-view li {
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .tree-view li.folder:before {
+      content: "📁 ";
+    }
+    .tree-view li.file:before {
+      content: "📄 ";
+    }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <div class="file-upload">
+      <h2>Upload Files</h2>
+      <input type="file" id="file-input" multiple>
+      <button onclick="uploadFiles()">Upload</button>
+    </div>
+    <div class="tree-view">
+      <h2>File Tree</h2>
+      <ul id="file-tree">
+        <!-- Dynamic content will be generated here -->
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    // JavaScript code to handle file upload and tree view
+    const fileInput = document.getElementById('file-input');
+    const fileTree = document.getElementById('file-tree');
+
+    function uploadFiles() {
+      const files = fileInput.files;
+      for (let i = 0; i < files.length; i++) {
+        // Code to handle file upload
+        console.log('Uploaded file:', files[i].name);
+      }
+      generateFileTree(files);
+    }
+
+    function generateFileTree(files) {
+      fileTree.innerHTML = '';
+      for (let i = 0; i < files.length; i++) {
+        const fileName = files[i].name;
+        const fileExtension = fileName.split('.').pop().toLowerCase();
+        const fileType = fileExtension === 'pdf' || fileExtension === 'doc' || fileExtension === 'docx' ? 'file' : 'folder';
+        const listItem = document.createElement('li');
+        listItem.className = fileType;
+        listItem.textContent = fileName;
+        fileTree.appendChild(listItem);
+      }
+    }
+  </script>
+  <div id="document-preview"></div>
+
+  <script>
+    // Função para exibir a previsualização do documento após o upload
+    function previewDocument(filePath) {
+      // Usar a biblioteca PDF.js ou Office.js para exibir o documento
+      // O código dessa função dependeria da biblioteca utilizada
+      // e do tipo de arquivo a ser exibido
+    }
+  
+    // Chamar a função de previsualização após o upload do arquivo
+    fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+      const filePath = 'localhost/processos/uploads/' + file.name; // Caminho do arquivo no servidor
+      previewDocument(filePath);
+    });
+  </script>
+</body>
+
+</html>

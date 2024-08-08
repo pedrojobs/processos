@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Clientes</title>
+    <!-- Incluir a biblioteca jstree CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <!-- Incluir a biblioteca jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Incluir a biblioteca jstree JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+        <!-- Incluir o CSS personalizado -->
+        
+       <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h2>Menu Serviços</h2>
+        <ul><li><a href="Menu Completo.html">Todos os Produtos</a></li>
+            
+                <li><a href="Portal de Diplomas.html">Portal de Diplomas</a></li>
+                <li><a href="Diploma Manual.html">Diploma Manual</a></li>
+                <li><a href="Diploma Totvs.html">Diploma Totvs</a></li>
+                <li><a href="Diploma API.html">Diploma API</a></li>
+                <li><a href="Portal de Validação.html">Portal de Validação</a></li>
+                <li><a href="Portal Assinaturas.html">Portal Assinaturas</a></li>
+                <li><a href="GED.html">GED</a></li>
+                <li><a href="RD.html">RD</a></li>
+                <li><a href="Menu interno.html">Serviços internos</a></li>
+        </ul>
+        
+    </div>
+    
+  </body>
+<body>
+    <h1>Visão do Clientes RD</h1>
+    <!-- Div onde o menu de árvore será renderizado -->
+    <h1>Emissora/Registradora</h1>
+    <div id="jstree">
+        <ul>
+            <li data-jstree='{"icon":"fas fa-check"}'>Root node
+                <ul>
+    </div>
+   
+    <script>
+      
+        $(document).ready(function(){
+            // Dados JSON para a estrutura de árvore
+            
+            var data = [
+                { "icon":"fas fa-folder","state": {"opened": true},"text": "Suporte",
+               
+                    "children": [
+                    
+                    {"icon":"fas fa-folder", "state": {"opened": true},"text": "RD",
+                            "children": [ 
+                                              {"icon":"fas fa-folder","text": "Documentos",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Processos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Aprovar Lote "},
+                                                         ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Status do Processo",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Aguardando Aprovação da Emissora"},
+                                                         {"icon":"fas fa-file","text": "Rejeitado pela Emissora"},
+                                                         {"icon":"fas fa-file","text": "Análise Reprovada"},
+                                                         {"icon":"fas fa-file","text": "Registrado"},
+                                                         {"icon":"fas fa-file","text": "Anulado"},
+                                                         {"icon":"fas fa-file","text": "Registro Recusado"},
+                                                         ]
+                                                         },                                                   
+                                                        
+                                                         {"icon":"fas fa-folder","text": "Lotes de Processos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Lote "},
+                                                         {"icon":"fas fa-file","text": "Editar Lote "},
+                                                        ]
+                                                         },
+                                                         
+                                                         
+                                                         ]                                                      
+                                              },
+                                             {"icon":"fas fa-folder","text": "Cadastros ",
+                                              "children": [
+                                                         {"icon":"fas fa-folder","text": "Cursos",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Curso "},
+                                                         {"icon":"fas fa-file","text": "Editar Curso "},
+                                                        ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Design ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Design "},
+                                                         {"icon":"fas fa-file","text": "Editar Design "},
+                                                        ]
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Registro do Livro ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Registrar "},
+                                                         {"icon":"fas fa-file","text": "Recusar "},
+                                                        ]
+
+                                                         },
+                                                         {"icon":"fas fa-folder","text": "Livros ",
+                                                         "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Livro "},
+                                                         {"icon":"fas fa-file","text": "Editar livro "},
+                                                         {"icon":"fas fa-file","text": "Excluir livro "},
+                                                        ]
+                                                         }
+                                                         ]                                                     
+                                              },
+                                  {"icon":"fas fa-folder","text": "Ajustes ",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Usuários",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar usuário "},
+                                                         {"icon":"fas fa-file","text": "Desativar usuário "}
+                                                         ]                                   
+                                                        },
+                                                        {"icon":"fas fa-folder","text": "Assinantes ",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastrar Assinantes "},
+                                                         {"icon":"fas fa-file","text": "Editar Assinantes "}
+                                                         ]  
+                                                        }
+                                                        ]
+                                                      },                                                        
+                                                        {"icon":"fas fa-folder","text": "Config. ADM",
+                                              "children": [
+                                                        {"icon":"fas fa-folder","text": "Cadastro Cliente ",
+                                                        "children": [
+                                                         {"icon":"fas fa-file","text": "Cadastra Cliente "},
+                                                         {"icon":"fas fa-file","text": "Editar Cliente "},
+                                                         {"icon":"fas fa-file","text": "Desativa Cliente "}
+                                                         ] 
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Configuração "},
+                                                        {"icon":"fas fa-folder","text": "Dúvida ",
+                                                        "children": [
+                                                         {"icon":"fas fa-folder",
+                                                          "text": "Dúvida Técnica",
+                                                         "children": [
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Funcionalidade"},
+                                                          {"icon":"fas fa-file","text": "Dúvida sobre Performance"}
+                                                          ]
+                                                          },
+                                                           {"icon":"fas fa-file","text": "Dúvida Comercial"}
+                                                          ]
+                                                        },
+                                                        {"icon":"fas fa-file","text": "Mensagem de Erro "},
+                                                        {"icon":"fas fa-file","text": "Melhoria "},
+                                                        {"icon":"fas fa-file","text": "Serviço indisponivel "},
+                                                        {"icon":"fas fa-file","text": "Atualização do sistema "},
+                                                        {"icon":"fas fa-file","text": "Elogios,Sugestões e criticas "}
+                                                        ]
+                                            
+                                                    }
+                                                ]
+                    },
+                    ]
+                },
+    
+                ];
+             
+            // Inicializar o jstree com os dados
+            $('#jstree').jstree({
+                'core': {
+                    'data': data
+                }
+                
+            });
+        });
+    </script>
+    
+</body> 
+</html>
